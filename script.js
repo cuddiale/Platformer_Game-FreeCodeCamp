@@ -161,6 +161,10 @@ const animate = () => {
       platforms.forEach((platform) => {
         platform.position.x += 5;
       });
+
+      checkpoints.forEach((checkpoint) => {
+        checkpoint.position.x += 5;
+      });
     }
   }
 
@@ -236,6 +240,10 @@ const startGame = () => {
   canvas.style.display = "block";
   startScreen.style.display = "none";
   animate();
+};
+
+const showCheckpointScreen = (msg) => {
+  checkpointScreen.style.display = "block";
 };
 
 startBtn.addEventListener("click", startGame);
